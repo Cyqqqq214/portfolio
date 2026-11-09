@@ -64,12 +64,15 @@ h3, h4 { font-family: Georgia,"Songti SC","SimSun",serif; font-weight: 600; }
 .metric small { display: block; font-size: 11px; color: #8c806e; }
 .emphasis { background: var(--accent); color: #ecdfb8; border-color: var(--accent); }
 .emphasis > span, .emphasis small { color: #d5d8c9; }
-.chart-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 17px; }
+.chart-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 17px; margin-bottom: 22px; }
 .data-card { border: 1px solid #c8c0b1; padding: 19px; margin: 0; }
 .data-card figcaption { display: flex; align-items: baseline; flex-wrap: wrap; gap: 9px; }
 .data-card figcaption strong { font: 700 18px Georgia,"SimSun",serif; }.data-card figcaption span { color: #948671; font-size: 11px; }
+.chart-growth { flex-basis: 100%; }
+.chart-growth b { margin-inline-end: 4px; color: var(--rust); font: 700 clamp(19px, 2vw, 28px)/1.1 Georgia,serif; }
+.chart-period { white-space: nowrap; }
+.chart-note { grid-column: 1 / -1; margin: 0; color: #766955; font-size: 11px; }
 .chart { width: 100%; height: auto; display: block; margin-top: 8px; overflow: visible; }
-.chart-note { font-size: 11px; color: #928573; margin: 10px 0 22px; }
 .funnel-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 17px; }
 .funnel ol { list-style: none; margin: 10px 0 0; padding: 0; }
 .funnel li { display: flex; justify-content: space-between; gap: 10px; color: #f8f3e6; background: #8b947d; padding: 10px 19px; margin: 7px 0; clip-path: polygon(0 0,100% 0,97% 100%,0 100%); font-size: 13px; }
@@ -337,20 +340,34 @@ h3, h4 { font-family: Georgia,"Songti SC","SimSun",serif; font-weight: 600; }
   <div class="chapter-paper">
     <div class="lead narrow">
       <p class="eyebrow">小红书（行吟信息科技） · 创新产品增长运营 · 2026.07 — 2026.11</p>
-      <h3>作为产品增长团队成员负责渠道增长，<br class="desktop">同期产品单日 DAU 峰值达到入职日的约 3.5 倍</h3>
+      <h3>作为产品增长团队成员负责渠道增长，<br class="desktop">与团队共同推动产品日活增长</h3>
     </div>
     <p class="body-copy">我从 0 到 1 搭建抖音与小红书的多账号矩阵，为不同账号分配内容方向并制定发布节奏。通过周报定位「高互动、低转化」的内容，再用跨账号对照测试筛选文案，并根据数据调整图文与视频的分工。</p>
     <div class="metrics">
-      <div class="metric emphasis"><span>单日 DAU</span><b>+249.8%</b><small>8.31 万 → 29.07 万 · 缩放示意</small></div>
-      <div class="metric"><span>MAU</span><b>+81.4%</b><small>91.34 万 → 165.74 万 · 缩放示意</small></div>
+      <div class="metric emphasis"><span>单日 DAU</span><b>+249.8%</b></div>
+      <div class="metric"><span>MAU</span><b>+81.4%</b></div>
       <div class="metric"><span>日均新增用户</span><b>约 +59%</b><small>累计用户接近 400 万 · 缩放示意</small></div>
       <div class="metric"><span>矩阵累计曝光</span><b>1000 万+</b><small>抖音与小红书多账号矩阵</small></div>
     </div>
     <div class="chart-grid">
-      <figure class="data-card"><figcaption><strong>DAU 趋势</strong><span>07.29—11.01 · 日活跃用户（万）</span></figcaption><svg id="dau-chart" class="chart" preserveAspectRatio="none" viewBox="0 0 600 270" role="img" aria-label="日活跃用户（万）趋势示意"></svg></figure>
-      <figure class="data-card"><figcaption><strong>每日新增用户</strong><span>07.29—11.01 · 新增设备（万）</span></figcaption><svg id="new-chart" class="chart" preserveAspectRatio="none" viewBox="0 0 600 270" role="img" aria-label="每日新增设备（万）趋势示意"></svg></figure>
+      <figure class="data-card">
+        <figcaption>
+          <strong>DAU 趋势</strong>
+          <span class="chart-period">项目期 7.29-11.8</span>
+          <span class="chart-growth"><b>+249.8%</b> 峰值较入职日</span>
+        </figcaption>
+        <svg id="dau-chart" class="chart" preserveAspectRatio="none" viewBox="0 0 600 220" role="img" aria-label="日活跃用户趋势示意"></svg>
+      </figure>
+      <figure class="data-card">
+        <figcaption>
+          <strong>每日新增用户</strong>
+          <span class="chart-period">项目期 7.29-11.8</span>
+          <span class="chart-growth"><b>约 +59%</b> 10 月日均较 8 月</span>
+        </figcaption>
+        <svg id="new-chart" class="chart" preserveAspectRatio="none" viewBox="0 0 600 220" role="img" aria-label="每日新增设备趋势示意"></svg>
+      </figure>
+      <p class="chart-note">两张趋势图的示意数据截至 11.1。</p>
     </div>
-    <p class="chart-note">图表逐日采用《创新产品增长曲线 1.2 倍新版》的示意值，单位为万。DAU 列按万取整，日新增列按千取整。增长率按原统计口径计算，产品指标为团队整体表现。同期 DAU 7 日均线提升 196.9%，累计用户较入职日增长约 137%。</p>
     <div class="funnel-grid">
       <div class="data-card funnel"><p class="eyebrow">全链路增长周报 · 转化漏斗</p><ol>
         <li><b>曝光</b><span>1000 万+</span></li><li><b>互动</b><span>综合互动率 +67%</span></li><li><b>主页访问</b><span>15.5 万+ 访问</span></li><li><b>涨粉 / 下载</b><span>自然流量承接</span></li>
@@ -452,55 +469,68 @@ h3, h4 { font-family: Georgia,"Songti SC","SimSun",serif; font-weight: 600; }
 </main>
 <dialog id="poster-viewer" aria-label="科普海报原图"><button type="button" class="close-poster" aria-label="关闭海报">×</button><img alt=""></dialog>
 <script>
-const chartSeries = [[["07-29", 8.0], ["07-30", 9.0], ["07-31", 9.0], ["08-01", 10.0], ["08-02", 10.0], ["08-03", 10.0], ["08-04", 11.0], ["08-05", 10.0], ["08-06", 10.0], ["08-07", 12.0], ["08-08", 10.0], ["08-09", 10.0], ["08-10", 11.0], ["08-11", 12.0], ["08-12", 12.0], ["08-13", 11.0], ["08-14", 10.0], ["08-15", 11.0], ["08-16", 11.0], ["08-17", 11.0], ["08-18", 11.0], ["08-19", 11.0], ["08-20", 11.0], ["08-21", 11.0], ["08-22", 10.0], ["08-23", 10.0], ["08-24", 10.0], ["08-25", 11.0], ["08-26", 10.0], ["08-27", 11.0], ["08-28", 11.0], ["08-29", 12.0], ["08-30", 12.0], ["08-31", 14.0], ["09-01", 15.0], ["09-02", 15.0], ["09-03", 14.0], ["09-04", 14.0], ["09-05", 16.0], ["09-06", 16.0], ["09-07", 17.0], ["09-08", 17.0], ["09-09", 15.0], ["09-10", 15.0], ["09-11", 16.0], ["09-12", 18.0], ["09-13", 18.0], ["09-14", 16.0], ["09-15", 18.0], ["09-16", 18.0], ["09-17", 17.0], ["09-18", 19.0], ["09-19", 18.0], ["09-20", 20.0], ["09-21", 18.0], ["09-22", 18.0], ["09-23", 22.0], ["09-24", 18.0], ["09-25", 19.0], ["09-26", 20.0], ["09-27", 21.0], ["09-28", 18.0], ["09-29", 19.0], ["09-30", 17.0], ["10-01", 26.0], ["10-02", 25.0], ["10-03", 24.0], ["10-04", 24.0], ["10-05", 23.0], ["10-06", 22.0], ["10-07", 23.0], ["10-08", 19.0], ["10-09", 19.0], ["10-10", 23.0], ["10-11", 20.0], ["10-12", 19.0], ["10-13", 19.0], ["10-14", 19.0], ["10-15", 20.0], ["10-16", 20.0], ["10-17", 23.0], ["10-18", 24.0], ["10-19", 19.0], ["10-20", 18.0], ["10-21", 18.0], ["10-22", 19.0], ["10-23", 18.0], ["10-24", 21.0], ["10-25", 23.0], ["10-26", 18.0], ["10-27", 20.0], ["10-28", 18.0], ["10-29", 18.0], ["10-30", 18.0], ["10-31", 25.0], ["11-01", 29.0]], [["07-29", 1.9], ["07-30", 1.9], ["07-31", 2.3], ["08-01", 1.7], ["08-02", 1.7], ["08-03", 1.8], ["08-04", 1.8], ["08-05", 1.6], ["08-06", 1.7], ["08-07", 1.9], ["08-08", 1.4], ["08-09", 1.6], ["08-10", 2.5], ["08-11", 1.8], ["08-12", 2.2], ["08-13", 2.4], ["08-14", 2.4], ["08-15", 1.7], ["08-16", 1.9], ["08-17", 1.6], ["08-18", 1.4], ["08-19", 1.6], ["08-20", 1.3], ["08-21", 1.4], ["08-22", 1.3], ["08-23", 1.2], ["08-24", 1.7], ["08-25", 1.2], ["08-26", 1.4], ["08-27", 1.3], ["08-28", 1.2], ["08-29", 2.0], ["08-30", 2.2], ["08-31", 2.7], ["09-01", 2.7], ["09-02", 2.8], ["09-03", 2.8], ["09-04", 2.9], ["09-05", 2.1], ["09-06", 2.3], ["09-07", 2.7], ["09-08", 2.8], ["09-09", 2.4], ["09-10", 2.9], ["09-11", 2.9], ["09-12", 2.2], ["09-13", 2.9], ["09-14", 3.0], ["09-15", 3.4], ["09-16", 3.0], ["09-17", 3.2], ["09-18", 2.6], ["09-19", 2.3], ["09-20", 3.0], ["09-21", 2.8], ["09-22", 3.0], ["09-23", 2.4], ["09-24", 4.3], ["09-25", 2.4], ["09-26", 2.7], ["09-27", 3.8], ["09-28", 2.4], ["09-29", 2.9], ["09-30", 2.5], ["10-01", 5.4], ["10-02", 5.4], ["10-03", 4.9], ["10-04", 4.8], ["10-05", 2.4], ["10-06", 3.4], ["10-07", 3.8], ["10-08", 2.2], ["10-09", 2.0], ["10-10", 3.1], ["10-11", 2.4], ["10-12", 2.2], ["10-13", 2.0], ["10-14", 2.0], ["10-15", 2.3], ["10-16", 2.0], ["10-17", 2.3], ["10-18", 3.9], ["10-19", 1.6], ["10-20", 1.6], ["10-21", 2.0], ["10-22", 1.9], ["10-23", 1.6], ["10-24", 1.8], ["10-25", 3.6], ["10-26", 2.0], ["10-27", 2.5], ["10-28", 1.8], ["10-29", 2.0], ["10-30", 1.9], ["10-31", 4.5], ["11-01", 3.5]]];
+// Relative chart heights, with no absolute user counts.
+const dauTrend = [
+  0.267, 0.300, 0.300, 0.333, 0.333, 0.333, 0.367, 0.333, 0.333, 0.400, 0.333, 0.333,
+  0.367, 0.400, 0.400, 0.367, 0.333, 0.367, 0.367, 0.367, 0.367, 0.367, 0.367, 0.367,
+  0.333, 0.333, 0.333, 0.367, 0.333, 0.367, 0.367, 0.400, 0.400, 0.467, 0.500, 0.500,
+  0.467, 0.467, 0.533, 0.533, 0.567, 0.567, 0.500, 0.500, 0.533, 0.600, 0.600, 0.533,
+  0.600, 0.600, 0.567, 0.633, 0.600, 0.667, 0.600, 0.600, 0.733, 0.600, 0.633, 0.667,
+  0.700, 0.600, 0.633, 0.567, 0.867, 0.833, 0.800, 0.800, 0.767, 0.733, 0.767, 0.633,
+  0.633, 0.767, 0.667, 0.633, 0.633, 0.633, 0.667, 0.667, 0.767, 0.800, 0.633, 0.600,
+  0.600, 0.633, 0.600, 0.700, 0.767, 0.600, 0.667, 0.600, 0.600, 0.600, 0.833, 0.967
+];
+const newUserTrend = [
+  0.317, 0.317, 0.383, 0.283, 0.283, 0.300, 0.300, 0.267, 0.283, 0.317, 0.233, 0.267,
+  0.417, 0.300, 0.367, 0.400, 0.400, 0.283, 0.317, 0.267, 0.233, 0.267, 0.217, 0.233,
+  0.217, 0.200, 0.283, 0.200, 0.233, 0.217, 0.200, 0.333, 0.367, 0.450, 0.450, 0.467,
+  0.467, 0.483, 0.350, 0.383, 0.450, 0.467, 0.400, 0.483, 0.483, 0.367, 0.483, 0.500,
+  0.567, 0.500, 0.533, 0.433, 0.383, 0.500, 0.467, 0.500, 0.400, 0.717, 0.400, 0.450,
+  0.633, 0.400, 0.483, 0.417, 0.900, 0.900, 0.817, 0.800, 0.400, 0.567, 0.633, 0.367,
+  0.333, 0.517, 0.400, 0.367, 0.333, 0.333, 0.383, 0.333, 0.383, 0.650, 0.267, 0.267,
+  0.333, 0.317, 0.267, 0.300, 0.600, 0.333, 0.417, 0.300, 0.333, 0.317, 0.750, 0.583
+];
+const holidayStart = 64;
+const holidayEnd = 70;
 
 const svgNamespace = "http://www.w3.org/2000/svg";
 
-function svgElement(name, attributes, text) {
+function svgElement(name, attributes) {
   const element = document.createElementNS(svgNamespace, name);
   for (const [key, value] of Object.entries(attributes)) {
     element.setAttribute(key, value);
   }
-  if (text !== undefined) element.textContent = text;
   return element;
 }
 
-function drawChart(id, rows, bars) {
+function drawChart(id, heights, bars) {
   const svg = document.getElementById(id);
-  const left = 43;
-  const right = 578;
-  const baseline = 227;
-  const chartHeight = 178;
-  const values = rows.map(row => row[1]);
-  const peakValue = Math.max(...values);
-  const tickStep = bars ? 2 : 10;
-  const maximum = Math.ceil(peakValue / tickStep) * tickStep;
-  const x = index => left + index * (right - left) / (rows.length - 1);
-  const y = value => baseline - value / maximum * chartHeight;
+  const left = 12;
+  const right = 588;
+  const baseline = 207;
+  const chartHeight = 184;
+  const x = index => left + index * (right - left) / (heights.length - 1);
+  const y = height => baseline - height * chartHeight;
 
-  for (let value = 0; value <= maximum; value += tickStep) {
+  for (const level of [0, 1 / 3, 2 / 3, 1]) {
     svg.append(svgElement("path", {
-      d: "M" + left + " " + y(value) + "H" + right,
+      d: "M" + left + " " + y(level) + "H" + right,
       stroke: "#c7bfae", "stroke-width": .7, "stroke-dasharray": "3 5", fill: "none"
     }));
-    svg.append(svgElement("text", {
-      x: left - 8, y: y(value) + 4, "text-anchor": "end", fill: "#978974", "font-size": 11
-    }, value === 0 ? "0" : value + " 万"));
   }
 
   if (bars) {
-    const barWidth = (right - left) / rows.length * .73;
-    rows.forEach((row, index) => {
-      const date = row[0];
-      const holiday = date >= "10-01" && date <= "10-07";
+    const barWidth = (right - left) / heights.length * .73;
+    heights.forEach((height, index) => {
+      const holiday = index >= holidayStart && index <= holidayEnd;
       svg.append(svgElement("rect", {
         x: x(index) - barWidth / 2,
-        y: y(row[1]), width: barWidth, height: baseline - y(row[1]),
+        y: y(height), width: barWidth, height: height * chartHeight,
         fill: holiday ? "#a34c23" : "#7e8974"
       }));
     });
   } else {
-    const points = rows.map((row, index) => x(index) + "," + y(row[1])).join(" ");
+    const points = heights.map((height, index) => x(index) + "," + y(height)).join(" ");
     svg.append(svgElement("polygon", {
       points: left + "," + baseline + " " + points + " " + right + "," + baseline,
       fill: "#a34c23", opacity: .10
@@ -509,25 +539,10 @@ function drawChart(id, rows, bars) {
       points, fill: "none", stroke: "#a34c23", "stroke-width": 2.4, "stroke-linejoin": "round"
     }));
   }
-
-  const peak = values.indexOf(peakValue);
-  svg.append(svgElement("circle", {
-    cx: x(peak), cy: y(values[peak]), r: 4, fill: "#f4efe3", stroke: "#a34c23", "stroke-width": 2
-  }));
-  svg.append(svgElement("text", {
-    x: Math.min(right - 28, Math.max(left + 28, x(peak))),
-    y: y(values[peak]) - 13, "text-anchor": "middle",
-    fill: "#a34c23", "font-weight": "bold", "font-size": 12
-  }, "峰值 " + values[peak] + (bars ? " 万 / 日" : " 万")));
-  for (const index of [0, Math.floor(rows.length / 3), Math.floor(rows.length * 2 / 3), rows.length - 1]) {
-    svg.append(svgElement("text", {
-      x: x(index), y: 252, "text-anchor": "middle", fill: "#978974", "font-size": 11
-    }, rows[index][0].replace("-", ".")));
-  }
 }
 
-drawChart("dau-chart", chartSeries[0], false);
-drawChart("new-chart", chartSeries[1], true);
+drawChart("dau-chart", dauTrend, false);
+drawChart("new-chart", newUserTrend, true);
 
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 
